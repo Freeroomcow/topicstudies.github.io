@@ -1,11 +1,11 @@
 # Changelog
-Beta 1.1
-Added Suggestion box.
-Changed tab titles of all games
-Added Flappy Bird
-Added Wordle
-Added 2048
-Added Duck Lifes 2 and 4
+!Beta 1.1
+!Added Suggestion box.
+!Changed tab titles of all games
+!Added Flappy Bird
+!Added Wordle
+!Added 2048
+!Added Duck Lifes 2 and 4
 
 Beta 1.0
 Made an actual UI
