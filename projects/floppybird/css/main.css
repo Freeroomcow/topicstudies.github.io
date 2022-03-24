@@ -116,7 +116,7 @@ body
 #gamecontainer
 {
    position: relative;
-   width: 100%;
+   width: 50%;
    height: 100%;
    min-height: 525px;
 }
@@ -126,7 +126,7 @@ Screen - Game
 */
 #gamescreen
 {
-   position: absolute;
+   position: relative;
    width: 50%;
    height: 100%;
 }
