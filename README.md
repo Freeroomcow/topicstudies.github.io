@@ -9,6 +9,18 @@ A project of mine to help students during the downtime of school.
 # Changelog
 
 
+# Beta 1.2
+
+Added Cookie Clicker 2.0
+
+Added Basketball STars
+
+Added Papas Pizzeria
+
+Added Geometry Dash 
+
+Added Slope
+
 # Beta 1.1
 
 Added Suggestion box.
