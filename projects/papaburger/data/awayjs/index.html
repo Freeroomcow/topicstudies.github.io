@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<title>Awayjs</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+var qs = {};
+if (location.search) {
+	location.search.substr(1).split(/&/g).map(function (term) {
+		var parts = term.split(/=/g);
+		if (parts.length === 1) {
+				parts.push("1");
+		}
+		qs[parts[0]] = parts[1];
+	});
+	console.log(qs.g);
+}
+if(qs.g){
+	var config = {
+	   "width":800,
+	   "height":560,
+	   "progressBar_width": 0.33,
+	   "progressBar_height": 0.03,
+	   "runtime":[
+		  "runtime.js?2"
+	   ],
+	   "binary":[
+		  {
+			 "path":"../"+qs.g+".swf",
+			 "resourceType":"GAME"
+		  }                                                       
+	   ]
+	}
+}
+</script>
+<script src="./loader.js"></script>
+<script src="./helper.js"></script>
+<script src="./start.js"></script>
+</head>
+<body style="cursor: initial;">
+<div id="splash">
+<div id="wrapper">
+<div class="jss31 jss34">
+<div class="jss32">
+<h1 class="jss7 jss9 jss20 jss3">
+<div class="jss125">Loading...</div>
+</h1>
+</div>
+</div>
+<div id="progressbar">
+<div id="progressbar2"></div>
+</div>
+</div>
+</div>
+</body>
