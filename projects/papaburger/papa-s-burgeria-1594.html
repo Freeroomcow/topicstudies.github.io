@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home | Schoology</title>
+<meta name="description" content="It's a beautiful day for Marty and Rita who have just received a surprise gift from Papa Louie... A somewhat poisoned gift since it is to get hired in...">
+<meta name="viewport" content="user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, height=device-height">
+<link rel="manifest" href="manifest.json">
+<link rel="shortcut icon" type="image/ico" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+<meta property="fb:admins" content="1221399263" />
+<meta property="fb:app_id" content="465155283560438" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style2.min.css?6">
+<script src="js/jquery/jquery.js?3"></script>
+<script src="js/all2.min.js?4"></script>
+
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://quantcast.mgr.consensu.org'
+    .concat('/choice/', 'rKDz-RZJmVGyq', '/', host, '/choice.js')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            event.source.postMessage(returnMsg, '*');
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+
+
+</script>
+<script>
+var notejeu = getCookie("notejeu");
+var noteDisabled="false";
+if (notejeu != "") {
+	if (notejeu.split('-').find(row => row == '1594')) {
+		var noteDisabled="true";
+	}
+}
+$(document).ready(function(){
+	if (noteDisabled == "true") {
+		$(".rating").jRating({isDisabled : true});
+	}
+	else {
+		$(".rating").jRating({
+			isDisabled : false,
+			onSuccess : function(){
+				alert('Thank you : your rate has been saved!');
+			},
+			onError : function(){
+				alert('Error : please retry');
+			}
+		});
+	}
+});
+</script>
+<script>
+var gplay = getCookie("gplay");
+if (gplay == "" || gplay != '1594') {
+	$.ajax({
+    url: 'inc/view_add.php',
+    type: 'POST',
+    data: 'id=1594',
+    cache: false
+	})
+}
+</script>
+<div id="game_container">
+<div class="jeu" id="flashobj" style="width:1024px;height:768px;display:none;"></div>
+<div id="preloader">
+<div id="playAll">
+<div id="playImg" style="background-image:url(thumbs/jeu-1594.jpg?v=2)"></div>
+<img class="playThumb" src="thumbs/jeu-1594.jpg?v=2" alt="">
+<div id="playButton">PLAY GAME</div>
+<div id="playName">Papa's Burgeria</div>
+<div id="playGame"></div>
+</div>
+<div id="adContainer"></div>
+</div>
+<script>
+if ( isMobile() ) {
+    $('#adContainer').css({
+      position : 'fixed',
+      top : '0px',
+      left : '0px',
+      'z-index' : 100,
+      width: '100vw',
+      height: '100vh',
+      overflow: 'hidden',
+      background: '#000',
+      display: 'none'
+    });
+	
+	$('#flashobj').css({
+      position : 'fixed',
+      top : '0px',
+      left : '0px',
+      'z-index' : 101,
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
+      background: '#000'
+    });
+}
+
+function gameResize() {
+  $('#flashobj').css('width', '100%');
+  var flashobj = document.getElementById('flashobj');
+  var gameWidth = flashobj.offsetWidth;
+  var gameHeight = Math.round(gameWidth * 0.7500);
+  var screenH=$(window).height()-90;
+  if (gameHeight > screenH) gameHeight=screenH;
+  $('#flashobj').css('height', gameHeight);
+}
+  
+function removeAdContainer(){
+    $('#flashobj').html("<iframe id=\"embed\" src=\"data\/awayjs\/index.html?g=1594\" marginheight=\"0\" marginwidth=\"0\" scrolling=\"no\" allowfullscreen allow=\"autoplay;fullscreen\"><\/iframe>\n<button type=\"button\" id=\"closegame\" onclick=\"closeGame();\" ontouchmove=\"moveButton();\">\n    <svg id=\"iconarrow\" viewBox=\"6 0 14 24\"><path d=\"M9 19.91a2 2 0 0 1-1.403-3.424L12.15 12 7.597 7.514a2 2 0 1 1 2.806-2.85l6 5.91a2 2 0 0 1 0 2.85l-6 5.911A1.993 1.993 0 0 1 9 19.911z\"><\/path><\/svg>\n    <img id=\"iconsite\" src=\"images\/iconsite.png\" alt=\"GL\">\n<\/button>");
+	$("#flashobj").show();
+	
+    if ( isMobile() ) {
+      if (!document.fullscreenElement) {
+        bodyFix();
+        openFullscreen(Id("flashobj"));
+      }
+	  $('#closegame').css('display', 'flex');
+    }
+    else {
+      $("#preloader").remove();
+	  gameResize();window.addEventListener('resize', gameResize);	  focusGame();
+      $("#fullscreen").show();
+    }
+}
+</script> </div>
+</div>
+</div>
+<div class="pubGside">
+<div id="pubG1" style="width:300px; height:600px; margin-top:15px;"><ins class="adsbygoogle" style="display:inline-block;min-width:160px; max-width:300px;width:100%;height:600px" data-ad-client="ca-pub-2304985967143948" data-ad-slot="4579219626"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div id="pubG2" style="height:250px; margin-top:15px;"><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2304985967143948" data-ad-slot="3951777494"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div id="pubG3" style="width:160px; height:600px; margin-top:15px;display:none;"><ins class="adsbygoogle" style="display:inline-block;min-width:160px; max-width:300px;width:100%;height:600px" data-ad-client="ca-pub-2304985967143948" data-ad-slot="4579219626"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+<div id="pubMobi" style="width:100%; max-height:300px; background-color: #f1f1f1; line-height: 0px; text-align: center; display:none;"><ins class="adsbygoogle" style="display:inline-block;width:100%;height:300px;" data-ad-client="ca-pub-2304985967143948" data-ad-slot="5968087256"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div class="content_wide">
+<div class="cons_head">
+
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="rGside">
+<div class="colonne_droite">
+
+
+</div></div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+<script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script><script src="js/ima/preloader2.js?3"></script><div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="OHuIOdop"></script></body>
+</html>

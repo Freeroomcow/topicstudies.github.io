@@ -1,0 +1,12 @@
+{
+    "name": "GamesLol",
+    "short_name": "GamesLol",
+    "icons": [
+        {
+            "src": "images/icons/android-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone"
+}
