@@ -6,7 +6,7 @@
         showFPS: false,
         frameRate: 60,
         tag: 'viewport',
-        SingleEnginFile: '//www.topicstudies.github.io/projects/angrybirds/cocos2dx.min.js',
+        SingleEnginFile: '/box2d/cocos2dx.min.js',
         /* engineDir:'cocos2d/', */
         appFiles: ['game.js']
     };
