@@ -17,13 +17,29 @@ Added Geometry Dash 2.0
 
 Changed Wordle to a more faithful recreation
 
-Added a new version of Cookie Clicker
-
 Added Super Mario Bros
 
-Added Bloons Tower Defense
+Added Bloons Tower Defense 4
 
-Added
+Added Subway Surfers
+
+Added Bobblehead Soccer
+
+Added Basketball Legends
+
+Added Temple Run 2
+
+Added Death Run 3D
+
+Added FNAF 1-3, Sister Location and Pizzeria Simulator
+
+Added Tetris
+
+Added Among Us 
+
+Added Drift Boss
+
+Added Hacker Type
 
 # Beta 1.2
 
