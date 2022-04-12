@@ -9,6 +9,22 @@ A project of mine to help students during the downtime of school.
 # Changelog
 
 
+# Release 1.0
+
+Added Papas Burgeria
+
+Added Geometry Dash 2.0
+
+Changed Wordle to a more faithful recreation
+
+Added a new version of Cookie Clicker
+
+Added Super Mario Bros
+
+Added Bloons Tower Defense
+
+Added
+
 # Beta 1.2
 
 Added Cookie Clicker 2.0
