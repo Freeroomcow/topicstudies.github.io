@@ -1,9 +1,9 @@
 tag	description	achieved
 ACH_PASS	Suck a dude off	0
-ACH_TOUCHDOWN1	Score a touchdown	0
-ACH_TOUCHDOWN3	Score 3 touchdowns in a game	0
-ACH_TOUCHDOWN5	Score 5 touchdowns in a game	0
-ACH_FIELDGOAL	Score a field goal	0
+ACH_TOUCHDOWN1	Fuck you	0
+ACH_TOUCHDOWN3	Lucas Bickerton	0
+ACH_TOUCHDOWN5	I love penis	0
+ACH_FIELDGOAL	Have a gangbang	0
 ACH_FIELDGOAL25	Score a 25 yard field goal	0
 ACH_FIELDGOAL50	Score a 50 yard field goal	0
 ACH_FIELDGOAL60	Score a 60 yard field goal	0
