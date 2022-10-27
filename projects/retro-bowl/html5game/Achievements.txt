@@ -1,5 +1,5 @@
 tag	description	achieved
-ACH_PASS	Make a pass	0
+ACH_PASS	Suck a dude off	0
 ACH_TOUCHDOWN1	Score a touchdown	0
 ACH_TOUCHDOWN3	Score 3 touchdowns in a game	0
 ACH_TOUCHDOWN5	Score 5 touchdowns in a game	0
