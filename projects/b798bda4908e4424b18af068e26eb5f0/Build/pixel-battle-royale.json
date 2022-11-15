@@ -1,0 +1,14 @@
+{
+"companyName": "FreezeNova",
+"productName": "Pixel Battle Royale",
+"dataUrl": "pixel-battle-royale.data.unityweb",
+"asmCodeUrl": "pixel-battle-royale.asm.code.unityweb",
+"asmMemoryUrl": "pixel-battle-royale.asm.memory.unityweb",
+"asmFrameworkUrl": "pixel-battle-royale.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"dataUrl": "must-revalidate"}
+}
