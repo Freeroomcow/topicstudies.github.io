@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/esm/popper.min.js"></script>
+	<script src="/adinLoader.js"></script>
+</head>
+<body class="bg-transparent">
+<div class="text-center">
+    <iframe src="index.html" frameborder="0" width="900" height="675"></iframe><br>
+    <button class="btn btn-danger mx-2" data-type="original">Original World</button>
+    <button class="btn btn-danger mx-2" data-type="space">Space World</button>
+    <button class="btn btn-danger mx-2" data-type="dinosaur">Dino World</button>
+</div>
+<script>
+    $('button').click(function () {
+        let type = $(this).data('type');
+        $('iframe').attr('src', 'index.html?world=' + type);
+    });
+</script>
+	<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script>
+</body>
+</html>
