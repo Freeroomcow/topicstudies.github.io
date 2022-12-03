@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <title>Home | Schoology</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+
+	<script type="text/javascript">
+	if ( window.self !== window.top ) {
+    	window.top.location.href=window.location.href;
+	}
+	else {
+      	var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webglbuild.json", {onProgress: UnityProgress});
+	}
+    	</script>
+
+<style type="text/css">
+p {
+font-family: Helvetica, Verdana, Arial, sans-serif;
+text-align: center;
+}
+h1 {
+font-family: Helvetica, Verdana, Arial, sans-serif;
+text-align: center;
+}
+h2 {
+font-family: Helvetica, Verdana, Arial, sans-serif;
+text-align: center;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #00a8a5;
+}
+a:visited {
+  color: #00a8a5
+}
+a:hover {
+  color: #007573
+}
+a:active {
+  color: #007573
+}
+</style>
+
+  </head>
+  <body>
+
+
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 540px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">SoccerPhysics</div>
+      </div>
+    </div>
+    
+
+
+  </body>
+</html>
