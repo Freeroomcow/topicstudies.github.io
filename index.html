@@ -15,7 +15,7 @@
 
   gtag('config', 'G-YRG4GPYT0P');
 </script>
-		<title>New Tab</title>
+		<title>Home | Schoology</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -49,7 +49,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Jackson's Student Learning Site</h1>
-								<p>Follow the IG for updates @studentlearnsgithub.</p>
+								<p>Follow the IG for updates @studentlearnsgithub</p>
 							</div>
 						</div>
 						<nav>
@@ -76,6 +76,8 @@
 							<article id="Assignments">
 								<h2 class="major">Games</h2>
 								<a href="https://form.jotform.com/topicstudies/game-suggestions">Want a game added? Suggest it here!</a>
+								<input type="text" id="searchInput" onkeyup="searchGames()" placeholder="Search for games...">
+								<div id="gameCardsContainer">
 								<div class="game-card">
 									<img class="thumb" width="400" height="400" src="projects\b798bda4908e4424b18af068e26eb5f0\kidzsearchgl-pixel-battle-royale-ks120414-158383-img.png" alt="pixelbr" />
 									<h1 style="color: white;">Pixel Battle Royale</h1>
@@ -684,6 +686,15 @@
 												</div>
 												<button class="white" onclick="window.location.href='projects/moto-x3m-6/index.html'">Launch Game</button>
 											</div>
+											<div class="game-card">
+												<img class="thumb" width="400" height="400" src="projects\ducklife copy 5 - Copy - Copy copy\d2a3bbd1bb8aea542835f4f8a353d388.jpg" alt="raft" />
+												<h1 style="color: white;">Raft Wars</h1>
+												<div style="margin: 24px 0;">
+													<i class="fa-solid fa-keyboard"></i>
+												</div>
+												<button class="white" onclick="window.location.href='projects/ducklife copy 5 - Copy - Copy copy/index.html'">Launch Game</button>
+											</div>
+										</div>
 							</article>
 
 						<!-- About -->
@@ -753,6 +764,39 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function searchGames() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase();
+    const gameCardsContainer = document.getElementById("gameCardsContainer");
+    const gameCards = gameCardsContainer.getElementsByClassName("game-card");
+
+    for (let i = 0; i < gameCards.length; i++) {
+        const gameTitle = gameCards[i].getElementsByTagName("h1")[0];
+        const gameText = gameCards[i].getElementsByClassName("desc")[0];
+
+        let titleText = '';
+        let descriptionText = '';
+
+        if (gameTitle) {
+            titleText = gameTitle.textContent || gameTitle.innerText;
+        }
+        if (gameText) {
+            descriptionText = gameText.textContent || gameText.innerText;
+        }
+
+        if (
+            titleText.toUpperCase().indexOf(filter) > -1 ||
+            descriptionText.toUpperCase().indexOf(filter) > -1
+        ) {
+            gameCards[i].style.display = "";
+        } else {
+            gameCards[i].style.display = "none";
+        }
+    }
+}
+
+			</script>
 
 	</body>
 </html>
